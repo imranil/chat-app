@@ -1,0 +1,28 @@
+.button {
+    padding: 10px 16px;
+    background-color: var(--interactive-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--interactive-primary-hover);
+    }
+
+    &:focus {
+        outline: 4px solid var(--border-focus-state);
+    }
+
+    &:active {
+        background-color: var(--interactive-primary-click);
+    }
+
+    &:disabled {
+        cursor: default;
+        background-color: var(--disabled-primary);
+    }
+}

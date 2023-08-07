@@ -1,0 +1,129 @@
+.user-sidebar {
+    border-right: 1px solid var(--border-secondary);
+
+    .icon-button {
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--interactive-primary-hover);
+        }
+
+        &:focus {
+            outline: 4px solid var(--border-focus-state);
+        }
+
+        &:active {
+            background-color: var(--interactive-primary-click);
+        }
+    }
+
+    &__item.active .icon-button {
+        background-color: var(--interactive-gray-hover);
+    }
+}
+
+
+.chat-sidebar {
+    flex: 0 0 320px;
+    border-right: 1px solid var(--border-secondary);
+
+    .sidebar__header {
+        flex-shrink: 0;
+    }
+
+
+    .sidebar__main .create-group-btn>.button{
+        width: 100%;
+    }
+
+    
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+
+
+        .details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .name {
+                display: flex;
+                color: var(--text-primary);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                white-space: nowrap;
+            }
+
+            .last-message {
+                flex: 1;
+                color: var(--text-secondary);
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+                white-space: nowrap;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--interactive-gray-hover);
+        }
+    }
+}
+
+
+.room-recipients-sidebar {
+    flex: 0 0 320px;
+    border-left: 1px solid var(--border-secondary);
+
+    .sidebar__header {
+        align-items: flex-start;
+
+        span {
+            font-size: 22px;
+            line-height: 2em;
+        }
+    }
+
+    .sidebar__main {
+        align-items: flex-start;
+
+        .room-recipients-sidebar__item {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+
+            .recipientsDetails {
+                flex: 1;
+                display: flex;
+                color: var(--text-primary);
+                font-weight: 500;
+                font-size: 16px;
+                white-space: nowrap;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+:root[data-theme="dark"] {
+    .user-sidebar {
+        .icon-button {
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.register-form {
+    max-width: 648px;
+    
+    .form__footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .form__link-area {
+            display: flex;
+            gap: 8px;
+        }
+    }
+}

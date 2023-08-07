@@ -1,0 +1,85 @@
+.textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-primary);
+    }
+
+    &__input {
+        padding: 8px;
+        outline: none;
+        border: 1px solid var(--border-primary);
+        border-radius: var(--border-radius);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-primary);
+        background-color: var(--bg-block-primary);
+        resize: none;
+
+        &:focus {
+            box-shadow: inset 0px 0px 0px 2px var(--border-focus-state);
+        }
+        
+        &:placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--text-secondary);
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--bg-block-overlay-secondary);
+            border-radius: var(--border-radius);
+        }
+    }
+
+    &:hover &__input {
+        background-color: var(--bg-block-secondary);
+    }
+
+    &.error &__input {
+        border: 1px solid var(--system-error);
+        background-image: url('../../../assets/icons/error-icon.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-origin: content-box;
+        
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &.success &__input {
+        border: 1px solid var(--system-success);
+        background-image: url('../../../assets/icons/success-icon.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-origin: content-box;
+        
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &__errors {
+        display: flex;
+        flex-direction: column;
+
+        &__error {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--system-error);
+        }
+    }
+}

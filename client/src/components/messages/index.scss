@@ -1,0 +1,42 @@
+.message-input-form {
+    width: 100%;
+    background-color: transparent;
+
+    .form__content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .message-textarea {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--interactive-primary-hover);
+        }
+    
+        &:focus {
+            outline: 4px solid var(--border-focus-state);
+        }
+    
+        &:active {
+            background-color: var(--interactive-primary-click);
+        }
+    }
+}
+
+
+:root[data-theme="dark"] {
+    .message-input-form {
+        &__button {
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+}
